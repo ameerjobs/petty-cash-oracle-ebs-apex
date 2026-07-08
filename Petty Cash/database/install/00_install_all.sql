@@ -1,6 +1,6 @@
 prompt Installing Petty Cash database objects
 
-@@../tables/xxpc_users.sql
+@@../tables/xx_users.sql
 @@../tables/xxpc_categories.sql
 @@../tables/xxpc_requests.sql
 @@../tables/xxpc_expenses.sql

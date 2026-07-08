@@ -20,7 +20,7 @@ create table xxpc_requests (
     last_update_date    date default sysdate not null,
     constraint xxpc_requests_pk primary key (request_id),
     constraint xxpc_requests_u1 unique (request_number),
-    constraint xxpc_requests_user_fk foreign key (pc_user_id) references xxpc_users (pc_user_id),
+    constraint xxpc_requests_user_fk foreign key (pc_user_id) references xx_users (pc_user_id),
     constraint xxpc_requests_amount_ck check (requested_amount > 0),
     constraint xxpc_requests_status_ck check (
         status_code in ('DRAFT', 'SUBMITTED', 'APPROVED', 'REJECTED', 'PAID', 'CLOSED', 'CANCELLED')

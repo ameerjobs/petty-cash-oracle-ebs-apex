@@ -1,0 +1,3 @@
+-- Create synonyms from the consuming schema if required by the deployment model.
+-- Example:
+-- create or replace synonym xx_users for custom_schema.xx_users;

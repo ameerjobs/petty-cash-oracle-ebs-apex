@@ -21,7 +21,7 @@ create table xxpc_expenses (
     constraint xxpc_expenses_pk primary key (expense_id),
     constraint xxpc_expenses_u1 unique (expense_number),
     constraint xxpc_expenses_request_fk foreign key (request_id) references xxpc_requests (request_id),
-    constraint xxpc_expenses_user_fk foreign key (pc_user_id) references xxpc_users (pc_user_id),
+    constraint xxpc_expenses_user_fk foreign key (pc_user_id) references xx_users (pc_user_id),
     constraint xxpc_expenses_category_fk foreign key (category_id) references xxpc_categories (category_id),
     constraint xxpc_expenses_amount_ck check (amount > 0),
     constraint xxpc_expenses_tax_ck check (tax_amount >= 0),

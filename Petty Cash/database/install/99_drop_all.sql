@@ -16,6 +16,6 @@ drop table xxpc_attachments purge;
 drop table xxpc_expenses purge;
 drop table xxpc_requests purge;
 drop table xxpc_categories purge;
-drop table xxpc_users purge;
+drop table xx_users purge;
 
 prompt Petty Cash database objects dropped

@@ -2,11 +2,11 @@ create or replace package body xxpc_security_pkg as
     function is_user_active (
         p_user_name in varchar2
     ) return varchar2 is
-        l_active_flag xxpc_users.active_flag%type;
+        l_active_flag xx_users.active_flag%type;
     begin
         select active_flag
           into l_active_flag
-          from xxpc_users
+          from xx_users
          where upper(user_name) = upper(p_user_name)
            and trunc(sysdate) between start_date and nvl(end_date, trunc(sysdate));
 
@@ -19,11 +19,11 @@ create or replace package body xxpc_security_pkg as
     function get_pc_user_id (
         p_user_name in varchar2
     ) return number is
-        l_pc_user_id xxpc_users.pc_user_id%type;
+        l_pc_user_id xx_users.pc_user_id%type;
     begin
         select pc_user_id
           into l_pc_user_id
-          from xxpc_users
+          from xx_users
          where upper(user_name) = upper(p_user_name)
            and active_flag = 'Y';
 

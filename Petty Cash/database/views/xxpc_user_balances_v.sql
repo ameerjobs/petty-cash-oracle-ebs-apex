@@ -11,7 +11,7 @@ select
     nvl(e.approved_expenses, 0) approved_expenses,
     nvl(r.approved_advances, 0) - nvl(e.approved_expenses, 0) available_balance,
     u.cash_limit_amount - (nvl(r.approved_advances, 0) - nvl(e.approved_expenses, 0)) remaining_limit
-from xxpc_users u
+from xx_users u
 left join (
     select pc_user_id, sum(nvl(approved_amount, requested_amount)) approved_advances
     from xxpc_requests

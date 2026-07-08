@@ -17,6 +17,6 @@ select
     u.user_name,
     r.request_number
 from xxpc_expenses e
-join xxpc_users u on u.pc_user_id = e.pc_user_id
+join xx_users u on u.pc_user_id = e.pc_user_id
 join xxpc_categories c on c.category_id = e.category_id
 left join xxpc_requests r on r.request_id = e.request_id;

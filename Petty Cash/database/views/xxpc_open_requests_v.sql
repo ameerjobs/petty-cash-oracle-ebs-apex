@@ -13,5 +13,5 @@ select
     u.employee_name,
     u.user_name
 from xxpc_requests r
-join xxpc_users u on u.pc_user_id = r.pc_user_id
+join xx_users u on u.pc_user_id = r.pc_user_id
 where r.status_code in ('DRAFT', 'SUBMITTED', 'APPROVED', 'PAID');

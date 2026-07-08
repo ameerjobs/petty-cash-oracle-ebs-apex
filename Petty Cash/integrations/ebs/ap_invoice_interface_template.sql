@@ -1,0 +1,7 @@
+-- Template only. Validate against local EBS setup before use.
+-- Suggested target tables:
+-- AP_INVOICES_INTERFACE
+-- AP_INVOICE_LINES_INTERFACE
+--
+-- Include org_id, vendor_id, vendor_site_id, invoice amount, currency, terms,
+-- distribution account, and source according to site standards.
